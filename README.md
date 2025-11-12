@@ -137,8 +137,7 @@ The site is built using modern web technologies (HTML5, CSS3, and JavaScript) wi
 *Contact page wireframe displaying form layout and contact information cards*
 
 ## WIREFRAME LINK CREATED USING FIGMA!!
-https://www.figma.com/make/yBd4abzyKrhNBEcfyIB8hv/Interactive-Wireframe-for-GitHub?node-id=0-1&t=Wahb60gvAjRXuTHS-1
----
+https://blimp-crave-61775473.figma.site/
 
 ## 🛠 Technical Stack
 
