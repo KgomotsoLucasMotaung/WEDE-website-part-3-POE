@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry - Small Business Plumbing Services</title>
+    <meta name="description" content="Enquire about our plumbing services. Fill out our form to get quotes, availability, or volunteer/sponsor information.">
+    <meta name="keywords" content="enquiry, plumbing, services, quote, Pretoria">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Small Business Website</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+  <a href="about.html" class="active">About</a>
+    <a href="services.html" class="active">Services</a>
+   <a href="enquiry.html" class="active">Enquiry</a>
+   <a href="contact.html" class="active">Contact</a>
+</nav>
+
+<main>
+    <section id="enquiry">
+        <h2>Enquire About Our Services</h2>
+        <form id="enquiryForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="service">Service Interested In:</label>
+            <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="emergency">Emergency Plumbing</option>
+                <option value="installation">Pipe Installation & Repair</option>
+                <option value="drain">Drain Cleaning</option>
+                <option value="heater">Water Heater Installation</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit Enquiry</button>
+        </form>
+        <div id="response"></div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Small Business Website. All Rights Reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

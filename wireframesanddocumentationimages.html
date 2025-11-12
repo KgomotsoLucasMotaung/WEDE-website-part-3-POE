@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Wireframes & Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h2 {
+            color: #1f2937;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        h3 {
+            color: #374151;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+        }
+        
+        .wireframe {
+            background: #f9fafb;
+            border: 3px solid #d1d5db;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .wireframe-label {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        
+        .wire-header {
+            background: #374151;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        
+        .wire-nav {
+            background: #2563eb;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-around;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        
+        .wire-nav-item {
+            color: white;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+        }
+        
+        .wire-hero {
+            background: linear-gradient(135deg, #1e3a8a, #1e40af);
+            padding: 3rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            color: white;
+        }
+        
+        .wire-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            border: 2px dashed #d1d5db;
+        }
+        
+        .wire-box {
+            background: #e5e7eb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border: 2px solid #9ca3af;
+        }
+        
+        .wire-image {
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            height: 250px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .wire-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .wire-feature {
+            background: #f3f4f6;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #d1d5db;
+        }
+        
+        .wire-footer {
+            background: #1f2937;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+        }
+        
+        .screenshot {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            color: white;
+            text-align: center;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        
+        .screenshot-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .screenshot-desc {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+        
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            border-left: 5px solid #3b82f6;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+        
+        .info-box h4 {
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-box p {
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 968px) {
+            .wire-hero,
+            .wire-features,
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📐 Website Wireframes & Documentation</h1>
+        <p class="subtitle">Small Business Plumbing Services Website - Lucas ST10483731</p>
+        
+        <!-- Home Page Wireframe -->
+        <div class="section">
+            <h2>🏠 Home Page Wireframe</h2>
+            
+            <div class="wireframe">
+                <div class="wireframe-label">INDEX.HTML</div>
+                
+                <div class="wire-header">
+                    <h3 style="color: white; margin: 0;">PROFESSIONAL PLUMBING SERVICES</h3>
+                    <p style="margin: 0.5rem 0 0;">Excellence Since 2010</p>
+                </div>
+                
+                <div class="wire-nav">
+                    <div class="wire-nav-item">Home</div>
+                    <div class="wire-nav-item">About</div>
+                    <div class="wire-nav-item">Services</div>
+                    <div class="wire-nav-item">Enquiry</div>
+                    <div class="wire-nav-item">Contact</div>
+                </div>
+                
+                <div class="wire-hero">
+                    <div>
+                        <h3 style="margin-top: 0;">Hero Title</h3>
+                        <p>Subtitle text here</p>
+                        <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                            <div style="background: #ef4444; padding: 1rem 2rem; border-radius: 8px;">CTA Button</div>
+                            <div style="background: rgba(255,255,255,0.2); padding: 1rem 2rem; border-radius: 8px; border: 2px solid white;">Secondary</div>
+                        </div>
+                    </div>
+                    <div class="wire-image">
+                        Hero Image<br/>400x400px
+                    </div>
+                </div>
+                
+                <div class="wire-content">
+                    <h3>Why Choose Us?</h3>
+                    <div class="wire-features">
+                        <div class="wire-feature">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">✓</div>
+                            <strong>Feature 1</strong>
+                            <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Description</p>
+                        </div>
+                        <div class="wire-feature">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⏰</div>
+                            <strong>Feature 2</strong>
+                            <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Description</p>
+                        </div>
+                        <div class="wire-feature">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔧</div>
+                            <strong>Feature 3</strong>
+                            <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Description</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="wire-content">
+                    <h3>Business Proposal Section</h3>
+                    <div class="wire-box">Paragraph content...</div>
+                    <div class="wire-box">Paragraph content...</div>
+                    <div class="wire-box">Paragraph content...</div>
+                </div>
+                
+                <div class="wire-footer">
+                    © 2025 Professional Plumbing Services. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Services Page Wireframe -->
+        <div class="section">
+            <h2>🔧 Services Page Wireframe</h2>
+            
+            <div class="wireframe">
+                <div class="wireframe-label">SERVICES.HTML</div>
+                
+                <div class="wire-header">
+                    <h3 style="color: white; margin: 0;">OUR SERVICES</h3>
+                </div>
+                
+                <div class="wire-nav">
+                    <div class="wire-nav-item">Home</div>
+                    <div class="wire-nav-item">About</div>
+                    <div class="wire-nav-item" style="background: rgba(255,255,255,0.3);">Services</div>
+                    <div class="wire-nav-item">Enquiry</div>
+                    <div class="wire-nav-item">Contact</div>
+                </div>
+                
+                <div class="wire-content">
+                    <h3>Service Offerings</h3>
+                    <div class="wire-box" style="border-left: 5px solid #ef4444;">
+                        <strong>Emergency Plumbing</strong>
+                        <p style="margin: 0.5rem 0 0;">24/7 service for urgent repairs</p>
+                    </div>
+                    <div class="wire-box" style="border-left: 5px solid #3b82f6;">
+                        <strong>Pipe Installation & Repair</strong>
+                        <p style="margin: 0.5rem 0 0;">Expert installation and fixing of pipes</p>
+                    </div>
+                    <div class="wire-box" style="border-left: 5px solid #10b981;">
+                        <strong>Drain Cleaning</strong>
+                        <p style="margin: 0.5rem 0 0;">Effective cleaning of clogged drains</p>
+                    </div>
+                    <div class="wire-box" style="border-left: 5px solid #f59e0b;">
+                        <strong>Water Heater Installation</strong>
+                        <p style="margin: 0.5rem 0 0;">Safe and efficient installation</p>
+                    </div>
+                </div>
+                
+                <div class="wire-footer">
+                    © 2025 Professional Plumbing Services
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Page Wireframe -->
+        <div class="section">
+            <h2>📞 Contact Page Wireframe</h2>
+            
+            <div class="wireframe">
+                <div class="wireframe-label">CONTACT.HTML</div>
+                
+                <div class="wire-header">
+                    <h3 style="color: white; margin: 0;">CONTACT US</h3>
+                </div>
+                
+                <div class="wire-nav">
+                    <div class="wire-nav-item">Home</div>
+                    <div class="wire-nav-item">About</div>
+                    <div class="wire-nav-item">Services</div>
+                    <div class="wire-nav-item">Enquiry</div>
+                    <div class="wire-nav-item" style="background: rgba(255,255,255,0.3);">Contact</div>
+                </div>
+                
+                <div class="wire-content">
+                    <h3>Contact Information</h3>
+                    <div class="wire-features">
+                        <div class="wire-feature" style="border: 2px solid #3b82f6;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📧</div>
+                            <strong>Email</strong>
+                            <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">contact@email.com</p>
+                        </div>
+                        <div class="wire-feature" style="border: 2px solid #10b981;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📱</div>
+                            <strong>Phone</strong>
+                            <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">+27 79 512 8828</p>
+                        </div>
+                        <div class="wire-feature" style="border: 2px solid #ef4444;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📍</div>
+                            <strong>Location</strong>
+                            <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Pretoria & Johannesburg</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="wire-content">
+                    <h3>Contact Form</h3>
+                    <div class="wire-box">Name: [Input Field]</div>
+                    <div class="wire-box">Email: [Input Field]</div>
+                    <div class="wire-box">Phone: [Input Field]</div>
+                    <div class="wire-box">Message Type: [Dropdown]</div>
+                    <div class="wire-box">Message: [Textarea]</div>
+                    <div style="background: #2563eb; color: white; padding: 1rem; text-align: center; border-radius: 8px; margin-top: 1rem;">
+                        SEND MESSAGE BUTTON
+                    </div>
+                </div>
+                
+                <div class="wire-footer">
+                    © 2025 Professional Plumbing Services
+                </div>
+            </div>
+        </div>
+        
+        <!-- Screenshots Section -->
+        <div class="section">
+            <h2>📸 Website Screenshots</h2>
+            <p style="color: #6b7280; font-size: 1.1rem; margin-bottom: 2rem;">
+                These are placeholder screenshots showing the layout and design of each page. Replace with actual screenshots of your completed website.
+            </p>
+            
+            <div class="screenshot">
+                <div class="icon">🏠</div>
+                <div class="screenshot-title">Home Page Screenshot</div>
+                <div class="screenshot-desc">
+                    Capture the full home page showing the hero section with image, features grid, and proposal content
+                </div>
+            </div>
+            
+            <div class="grid-2">
+                <div class="screenshot">
+                    <div class="icon">ℹ️</div>
+                    <div class="screenshot-title">About Page</div>
+                    <div class="screenshot-desc">
+                        Show company information and team section
+                    </div>
+                </div>
+                
+                <div class="screenshot">
+                    <div class="icon">🔧</div>
+                    <div class="screenshot-title">Services Page</div>
+                    <div class="screenshot-desc">
+                        Display all service offerings with icons
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid-2">
+                <div class="screenshot">
+                    <div class="icon">✉️</div>
+                    <div class="screenshot-title">Enquiry Page</div>
+                    <div class="screenshot-desc">
+                        Show the enquiry form with all fields
+                    </div>
+                </div>
+                
+                <div class="screenshot">
+                    <div class="icon">📞</div>
+                    <div class="screenshot-title">Contact Page</div>
+                    <div class="screenshot-desc">
+                        Display contact info cards and form
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Design Documentation -->
+        <div class="section">
+            <h2>🎨 Design Documentation</h2>
+            
+            <h3>Color Palette</h3>
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin: 2rem 0;">
+                <div style="background: #2563eb; height: 100px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"></div>
+                <div style="background: #ef4444; height: 100px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"></div>
+                <div style="background: #10b981; height: 100px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"></div>
+                <div style="background: #1f2937; height: 100px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"></div>
+                <div style="background: #f59e0b; height: 100px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"></div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; text-align: center; font-size: 0.9rem; color: #6b7280;">
+                <div><strong>Primary Blue</strong><br/>#2563eb</div>
+                <div><strong>Accent Red</strong><br/>#ef4444</div>
+                <div><strong>Success Green</strong><br/>#10b981</div>
+                <div><strong>Dark Gray</strong><br/>#1f2937</div>
+                <div><strong>Warning Orange</strong><br/>#f59e0b</div>
+            </div>
+            
+            <h3 style="margin-top: 3rem;">Typography</h3>
+            <div class="info-box">
+                <h4>Font Family</h4>
+                <p><strong>Primary:</strong> 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif</p>
+            </div>
+            <div class="info-box">
+                <h4>Font Sizes</h4>
+                <p><strong>H1:</strong> 3rem (48px) | <strong>H2:</strong> 2.5rem (40px) | <strong>H3:</strong> 1.5rem (24px) | <strong>Body:</strong> 1.1rem (17.6px)</p>
+            </div>
+            
+            <h3 style="margin-top: 3rem;">Key Features</h3>
+            <div class="info-box">
+                <h4>✨ Responsive Design</h4>
+                <p>Fully responsive layout that adapts to mobile, tablet, and desktop screens using CSS Grid and Flexbox</p>
+            </div>
+            <div class="info-box">
+                <h4>🎭 Modern Animations</h4>
+                <p>Smooth transitions, hover effects, and fade-in animations for enhanced user experience</p>
+            </div>
+            <div class="info-box">
+                <h4>📱 Mobile-First Navigation</h4>
+                <p>Sticky navigation with smooth scrolling and active state indicators</p>
+            </div>
+            <div class="info-box">
+                <h4>🎨 Gradient Backgrounds</h4>
+                <p>Professional gradient backgrounds and color schemes throughout the site</p>
+            </div>
+            
+            <h3 style="margin-top: 3rem;">Technical Stack</h3>
+            <div class="grid-2">
+                <div class="info-box">
+                    <h4>Frontend Technologies</h4>
+                    <p>• HTML5 (Semantic markup)<br/>
+                    • CSS3 (Grid, Flexbox, Animations)<br/>
+                    • JavaScript (ES6+)<br/>
+                    • Responsive Design Principles</p>
+                </div>
+                <div class="info-box">
+                    <h4>Best Practices</h4>
+                    <p>• SEO-optimized meta tags<br/>
+                    • Accessible form labels<br/>
+                    • Valid HTML5 structure<br/>
+                    • Cross-browser compatibility</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Implementation Notes -->
+        <div class="section">
+            <h2>📝 Implementation Notes</h2>
+            
+            <h3>How to Take Screenshots for README</h3>
+            <div class="info-box">
+                <h4>Step 1: Open Your Website</h4>
+                <p>Open each HTML page in your browser (Chrome, Firefox, or Edge recommended)</p>
+            </div>
+            <div class="info-box">
+                <h4>Step 2: Capture Full Page</h4>
+                <p>Use browser developer tools (F12) → Click the device toolbar icon → Select responsive dimensions → Take screenshot</p>
+            </div>
+            <div class="info-box">
+                <h4>Step 3: Save Images</h4>
+                <p>Save screenshots as: <code>home-page.png</code>, <code>about-page.png</code>, <code>services-page.png</code>, <code>enquiry-page.png</code>, <code>contact-page.png</code></p>
+            </div>
+            <div class="info-box">
+                <h4>Step 4: Add to README</h4>
+                <p>Create an <code>images</code> folder in your project and reference them in your README.md file</p>
+            </div>
+            
+            <h3 style="margin-top: 3rem;">Updated File Structure</h3>
+            <div class="wire-box" style="font-family: monospace; background: #1f2937; color: #10b981; padding: 2rem;">
+project-root/<br/>
+├── index.html<br/>
+├── about.html<br/>
+├── services.html<br/>
+├── enquiry.html<br/>
+├── contact.html<br/>
+├── css/<br/>
+│   └── style.css<br/>
+├── js/<br/>
+│   └── script.js<br/>
+├── images/<br/>
+│   ├── home-page.png<br/>
+│   ├── about-page.png<br/>
+│   ├── services-page.png<br/>
+│   ├── enquiry-page.png<br/>
+│   ├── contact-page.png<br/>
+│   └── wireframes/<br/>
+│       ├── home-wireframe.png<br/>
+│       ├── services-wireframe.png<br/>
+│       └── contact-wireframe.png<br/>
+└── README.md
+            </div>
+        </div>
+    </div>
+</body>
+</html>
